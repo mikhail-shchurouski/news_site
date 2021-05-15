@@ -61,7 +61,7 @@ def mail_sender(request):
             else:
                 messages.error(request, 'Ошибка отправки!')
         else:
-            messages.error(request, 'Ошибка регистрации!')
+            messages.error(request, 'Ошибка валидации!')
     else:
         form = ContactForm()
     return render(request, 'news/feedback.html', {'form': form})
